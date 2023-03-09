@@ -11,7 +11,7 @@ weatherForm.addEventListener('submit', (e) => {
     messageTwo.textContent = '';
 
     const location = search.value;
-    fetch('http://localhost:3000/weather?address='+location).then((res) => {
+    fetch('https://weather-app-nodejs-ww6j.onrender.com/weather?address='+location).then((res) => {
         res.json().then( (data) => {
             if (data.error) {
                 messageOne.textContent = data.error;
